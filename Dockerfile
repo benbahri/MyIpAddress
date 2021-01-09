@@ -1,6 +1,3 @@
-FROM node
-COPY web.js .
-COPY package.json .
-RUN npm install
-EXPOSE 3000
-CMD [ "npm", "start" ]
+FROM node:alpine
+ADD app.js /app.js
+CMD ["node", "/app.js"]
